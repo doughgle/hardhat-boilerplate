@@ -40,7 +40,7 @@ jobs:
       if: github.event_name != 'pull_request'
       uses: peaceiris/actions-gh-pages@v3
       with:
-        github_token: ${{ secrets.PUSH_TXT_ARTIFACT_TOKEN }}
+        personal_token: ${{ secrets.PUSH_TXT_ARTIFACT_TOKEN }}
         external_repository: doughgle/contract-artifacts
         publish_branch: ${{ github.ref }}
         publish_dir: ./artifacts/contracts
