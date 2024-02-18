@@ -23,3 +23,7 @@ jobs:
 
     - name: Run tests
       run: npx hardhat test
+
+    - name: Test Coverage on pull request
+      if: github.event_name == 'pull_request'
+      run: npx hardhat coverage
